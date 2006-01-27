@@ -1,0 +1,22 @@
+
+no_index: 
+  directory: 
+    - inc
+    - t
+generated_by: Module::Install version 0.55
+distribution_type: module
+version: 0.01
+name: File-UserConfig
+author: Adam Kennedy <cpan@ali.as>, L<http://ali.as/>
+license: perl
+build_requires: 
+  File::Remove: 0
+  Test::More: 0.47
+requires: 
+  perl: 5.005
+  File::ShareDir: 0.03
+  File::HomeDir: 0.51
+  File::Spec: 0.80
+  File::NCopy: 0
+  Carp: 0
+abstract: Get a user's existing config directory, or copy in defaults
