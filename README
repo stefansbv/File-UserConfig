@@ -8,6 +8,7 @@ NAME
       # Or without taking advantage of convention-based defaults
       $configdir = File::UserConfig->new(
             dist     => 'My-Application',
+            module   => 'My::Application',
             dirname  => '.myapp',
             sharedir => $defaults_here,
             )->configdir;
@@ -51,7 +52,7 @@ DESCRIPTION
     So on unix only, "Module::Name" will become ".module_name". Most of the
     time, this well end up what you would have used anyway.
 
-    "3. Where does the config directory live"
+    3. Where does the config directory live
 
     "File::UserConfig" knows where your home directory is by using
     File::HomeDir. And more specifically, on platforms that support
@@ -59,7 +60,7 @@ DESCRIPTION
 
     On Unix, Windows, and Mac OS X, it will just Do The Right Thing.
 
-    "4. Where do the defaults come from?"
+    4. Where do the defaults come from?
 
     The ability for a distribution to provide a directory full of default
     files is provided in Perl by File::ShareDir.
@@ -69,7 +70,7 @@ DESCRIPTION
     is going to install to it will be the default config dir.
 
 METHODS
-    The 5 accessors all feature implicit constructors.
+    The 6 accessors all feature implicit constructors.
 
     In other words, the two following lines are equivalent.
 
@@ -113,6 +114,16 @@ METHODS
       $name = File::UserConfig->dist(...);
 
     The "dist" accessor returns the name of the distribution.
+
+  module
+      $name = File::UserConfig->new(...)->module;
+  
+      $name = File::UserConfig->module(...);
+
+    The "module" accessor returns the name of the module.
+
+    Although the default dirname is based off the dist name, the module name
+    is the one used to find the shared dir.
 
   dirname
       $dir = File::UserConfig->new(...)->dirname;
