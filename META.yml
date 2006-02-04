@@ -5,7 +5,7 @@ no_index:
     - t
 generated_by: Module::Install version 0.55
 distribution_type: module
-version: 0.01
+version: 0.02
 name: File-UserConfig
 author: Adam Kennedy <cpan@ali.as>, L<http://ali.as/>
 license: perl
@@ -17,6 +17,6 @@ requires:
   File::ShareDir: 0.03
   File::HomeDir: 0.51
   File::Spec: 0.80
-  File::NCopy: 0
+  File::Copy::Recursive: 0.18
   Carp: 0
 abstract: Get a user's existing config directory, or copy in defaults
