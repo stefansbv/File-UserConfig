@@ -1,23 +1,26 @@
-
+--- 
+abstract: Get a user's existing config directory, or copy in defaults
+author: Adam Kennedy <cpan@ali.as>, L<http://ali.as/>
+build_requires: 
+  ExtUtils::MakeMaker: 6.11
+  File::Remove: 0.34
+  Test::More: 0.47
+distribution_type: module
+generated_by: Module::Install version 0.67
+license: perl
+meta-spec: 
+  url: http://module-build.sourceforge.net/META-spec-v1.3.html
+  version: 1.3
+name: File-UserConfig
 no_index: 
   directory: 
     - inc
     - t
-generated_by: Module::Install version 0.63
-distribution_type: module
-version: 0.04
-name: File-UserConfig
-author: Adam Kennedy <cpan@ali.as>, L<http://ali.as/>
-license: perl
-build_requires: 
-  File::Remove: 0
-  Test::More: 0.47
-  ExtUtils::MakeMaker: 6.11
 requires: 
-  perl: 5.005
-  File::ShareDir: 0.03
-  File::HomeDir: 0.51
-  File::Spec: 0.80
-  File::Copy::Recursive: 0.18
   Carp: 0
-abstract: Get a user's existing config directory, or copy in defaults
+  File::Copy::Recursive: 0.18
+  File::HomeDir: 0.51
+  File::ShareDir: 0.03
+  File::Spec: 0.80
+  perl: 5.005
+version: 0.05
