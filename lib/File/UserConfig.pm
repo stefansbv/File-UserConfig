@@ -57,7 +57,7 @@ On Unix, which has a combined home directory, we remap the dist name to
 be a lowercase hidden name with all '-' chars as '_'.
 
 So on unix only, "Module::Name" will become ".module_name". Most of the
-time, this well end up what you would have used anyway.
+time, this will end up what you would have used anyway.
 
 B<3. Where does the config directory live>
 
@@ -103,7 +103,7 @@ use File::ShareDir        ();
 
 use vars qw{$VERSION};
 BEGIN {
-	$VERSION = '0.05';
+	$VERSION = '0.06';
 }
 
 
@@ -163,7 +163,7 @@ sub new {
 	# If we don't have a sharedir, get it
 	# from the dist.
 	unless ( $self->sharedir ) {
-		$self->{sharedir} = File::ShareDir::module_dir($self->module);
+		$self->{sharedir} = File::ShareDir::dist_dir($self->dist);
 	}
 
 	# If we don't have a directory name, derive one
@@ -356,7 +356,7 @@ For other issues, contact the maintainer
 
 =head1 AUTHOR
 
-Adam Kennedy E<lt>cpan@ali.asE<gt>, L<http://ali.as/>
+Adam Kennedy E<lt>adamk@cpan.orgE<gt>
 
 =head1 SEE ALSO
 
@@ -364,7 +364,7 @@ L<File::HomeDir>, L<File::ShareDir>
 
 =head1 COPYRIGHT
 
-Copyright (c) 2006 Adam Kennedy. All rights reserved.
+Copyright 2006 - 2008 Adam Kennedy.
 
 This program is free software; you can redistribute
 it and/or modify it under the same terms as Perl itself.
