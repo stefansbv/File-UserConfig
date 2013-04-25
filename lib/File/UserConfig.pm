@@ -103,7 +103,7 @@ use File::ShareDir        ();
 
 use vars qw{$VERSION};
 BEGIN {
-	$VERSION = '0.06';
+	$VERSION = '0.07';
 }
 
 
@@ -162,7 +162,7 @@ sub new {
 
 	# If we don't have a sharedir, get it
 	# from the dist.
-	unless ( $self->sharedir ) {
+	unless ( $self->sharedir and -d $self->sharedir ) {
 		$self->{sharedir} = File::ShareDir::dist_dir($self->dist);
 	}
 
