@@ -206,7 +206,7 @@ sub new {
 
 	# Copy in the files from the sharedir
 	File::Copy::Recursive::dircopy( $self->sharedir, $self->configdir )
-		or Carp::croak("Failed to copy user data to " . $self->configdir);
+		or Carp::croak("Failed to copy user data from " . $self->sharedir . " to " . $self->configdir);
 
 	$self;
 }
